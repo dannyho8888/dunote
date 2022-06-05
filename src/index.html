@@ -7,9 +7,38 @@
   <script src="/components/header.js" type="text/javascript" defer></script>
 </head>
 <body class="grid grid-cols-5">
-  <div class="col-span-1 px-2 bg-gray-300">
-    testing
+  <!-- menu -->
+  <div class="col-span-1 px-2 bg-gray-300 p-2">
+    <div class="search w-full border-2">search</div>
+    <ul>
+      <li class="lable border-b-2">labelA</li>
+      <li class="label border-b-2">labelB</li>
+    </ul>
+    <div class="absolute inset-x-0 bottom-0 h-18">
+      <div class="border- border-2 border-sky-500">
+        new note
+      </div>
+    </div>
   </div>
-  <div class="col-span-3 bg-gray-600">hello</div>
+
+  <!--  text -->
+  <div class="col-span-4 bg-gray-400">
+
+    <div class="flex space-x-2 m-2">
+      <div class="font-bold rounded-full bg-slate-500 px-4 px-1">B</div>
+      <div class="font-bold rounded-full bg-slate-500 px-4 px-1">f</div>
+      <div class="font-bold rounded-full bg-slate-500 px-4 px-1">p</div>
+      <div class="font-bold rounded-full bg-slate-500 px-4 px-1">B</div>
+    </div>
+
+    <div class="m-2">
+      <input 
+        type="text"
+        placeholder="testing"
+        class="w-full h-full p-2"
+      >
+    </div>
+
+  </div>
 </body>
 </html>
