@@ -9,38 +9,27 @@
 </head>
 <body class="grid grid-cols-5">
   <!-- menu -->
-<<<<<<< HEAD
-  <div class="col-span-1 px-4 bg-green-50 h-screen">
+<div class="col-span-1 px-4 bg-green-50 h-screen">
 
-    <div class="border-2 flex items-center rounded-2xl mt-2 bg-white">
-      <i class="bi bi-search px-2"></i>
-      <input type="search" role="combobox" placeholder="Search in dunote" 
-      class="py-1 col-span-1 border-0 focus:outline-none drop-shadow-md">
-    </div>
-
-    <div class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
-      <i class="bi bi-bookmark-check-fill text-green-700 pr-1"></i>labelA
-    </div>
-
-    <div class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
-      <i class="bi bi-bookmark-dash-fill pr-1"></i>labelB
-    </div>
-    <div class="absolute w-1/6 bottom-2 py-1 text-center bg-green-500 duration-300 transition-all 
-      cursor-pointer hover:bg-green-600 rounded-full">new note
-    </div>
-=======
-  <div class="col-span-1 px-2 bg-gray-300 h-screen">
-    <div class="search w-full border-2">search</div>
-    <ul>
-      <li class="lable border-b-2 py-1">labelA</li>
-      <li class="label border-b-2 py-1">labelB</li>
-    </ul>labelB
-    
-    <div class=" bottom-0 py-1 text-center bg-slate-900 hover:text-slate-700 hover:bg-white rounded-full">new note</div>
->>>>>>> 6715246 (textarea css v0.1)
+  <div class="border-2 flex items-center rounded-md mt-2 bg-white drop-shadow-md">
+    <i class="bi bi-search px-2"></i>
+    <input type="text" placeholder="Search"
+    class="py-1 col-span-1 border-0 focus:outline-none w-full rounded-r-lg">
   </div>
 
-  <!--  text -->
+  <div class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
+    <i class="bi bi-bookmark-check-fill text-green-700 pr-1"></i>labelA
+  </div>
+
+  <div class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
+    <i class="bi bi-bookmark-dash-fill pr-1"></i>labelB
+  </div>
+  <div class="absolute w-1/6 bottom-2 py-1 text-center bg-green-500 duration-300 transition-all 
+    cursor-pointer hover:bg-green-600 rounded-full text-white">new note
+  </div>
+</div>
+
+  <!--  textarea -->
   <div class="group col-span-4 bg-white"> 
 
     <div class="flex m-2 border-b-2 border-green-300 pb-2 items-center">
@@ -49,24 +38,14 @@
       <i class="bi bi-code-slash px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i>
       <i class="bi bi-clipboard ml-auto mr-3 px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i> 
     </div>
-<<<<<<< HEAD
-    <div class="m-2">
-      <input 
-        type="text"
-        placeholder="testing"
-        class="w-full h-full p-2"
-      >
-    </div>
-=======
-
+  
     <form class="w-full h-full">
-      <div class="flex items-center group-hover:bg-slate-200 transition-all duration-500">
+      <div class="flex items-center transition-all duration-500">
         <textarea rows="16" cols="50" class="resize-none appearance-none bg-transparent focus:outline-none w-full h-full text-gray-700 mr-3 py-1 px-2"
         placeholder="Type something here!!"></textarea>
       </div>
     </form>
->>>>>>> 6715246 (textarea css v0.1)
-
+  
   </div>
 </body>
 </html>
