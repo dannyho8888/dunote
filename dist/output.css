@@ -485,20 +485,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 1 / span 1;
 }
 
-.col-span-5 {
-  grid-column: span 5 / span 5;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
 
 .col-span-4 {
   grid-column: span 4 / span 4;
+<<<<<<< HEAD
 }
 
 .m-2 {
@@ -515,20 +508,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex {
   display: flex;
+=======
+>>>>>>> 67b699e15e156ddabce3d260bc81c2305f3da9ec
 }
 
 .grid {
   display: grid;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .h-screen {
   height: 100vh;
 }
 
+<<<<<<< HEAD
 .h-full {
   height: 100%;
 }
@@ -537,16 +529,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+=======
+>>>>>>> 67b699e15e156ddabce3d260bc81c2305f3da9ec
 .w-36 {
   width: 9rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.flex-col {
-  flex-direction: column;
+.place-content-center {
+  place-content: center;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
