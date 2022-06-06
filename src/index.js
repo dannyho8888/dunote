@@ -1,4 +1,4 @@
-let data = ['inti']
+let data = ["you first note"]
 
 const titleEl = document.getElementById("title-el")
 const deleteBtn = document.getElementById("delete-btn")
@@ -6,7 +6,6 @@ const textField = document.getElementById('text-field')
 const finishBtn = document.getElementById('finish-btn')
 const dataLocal = JSON.parse( localStorage.getItem("dataSet") )
 
-// localStorage.removeItem("dataSet")
 
 if (dataLocal) {
     data = dataLocal
@@ -17,11 +16,11 @@ const pushData = () => {
     data.push(textField.value)
     textField.value = "";
     localStorage.setItem("dataSet", JSON.stringify(data));
+    renderTitle();
 }
 console.log(data)
 
 const deleteCurrentPage = (index) => {
-    console.log(index)
     for( let i = 0; i < data.length; i++){ 
         if ( i === index) { 
     
@@ -29,15 +28,25 @@ const deleteCurrentPage = (index) => {
         }
     }
     localStorage.setItem("dataSet", JSON.stringify(data));
+    renderTitle();
+    if (data[index] == null) {
+        textField.value = data[index-1]
+        index = index-1
+    }else {
+        textField.value = data[index]
+    }
+        
+    
 }
 
 const modifyCurrentPage = (index) => {
     data[index] = textField.value;
     localStorage.setItem("dataSet", JSON.stringify(data));
+    renderTitle();
 }
 
 const renderArticle = (index) => {
-    document.getElementById("text-field").value = data[index];
+    textField.value = data[index];
     deleteBtn.innerHTML = `
         <i onclick="deleteCurrentPage(${index})" 
         class="bi bi-trash3 mr-3 px-2
@@ -73,7 +82,7 @@ function renderTitle(){
     for (let i = 0; i < dataLocal.length; i++) {
         let title = ""
         for(let c of dataLocal[i]){
-            if(c=='\n')break
+            if(c ==='\n')break
             title += c
         }
         if(title.length>10)
