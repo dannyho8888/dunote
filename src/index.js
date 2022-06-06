@@ -46,7 +46,7 @@ function newNote() {
     `
     titleEl.innerHTML += `
             <div  class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
-                <i class="bi bi-bookmark-check-fill text-green-700 pr-1"></i> new note
+                new note
             </div>
         `
 };
@@ -63,8 +63,13 @@ function renderTitle(){
         if(title.length>10)
             title = title.slice(0,10) + "..."
         titleEl.innerHTML += `
+<<<<<<< HEAD
             <div onclick="renderArticle(${i})" class="cursor-pointer mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
                 <i class="bi bi-bookmark-check-fill text-green-700 pr-1"></i> ${title}
+=======
+            <div  class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
+                ${title}
+>>>>>>> 45fa9720f98795242e954cf8a6a69273637f5a86
             </div>
             `
     }

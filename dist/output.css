@@ -541,6 +541,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 4rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -590,6 +598,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center {
   align-items: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .rounded-md {
@@ -752,4 +768,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .group:hover .group-hover\:bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-h-96 {
+    max-height: 24rem;
+  }
+
+  .lg\:overflow-auto {
+    overflow: auto;
+  }
 }
