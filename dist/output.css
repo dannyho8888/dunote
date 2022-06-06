@@ -476,6 +476,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0.5rem;
 }
 
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -486,6 +490,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .m-2 {
   margin: 0.5rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mt-2 {
