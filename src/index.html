@@ -32,18 +32,20 @@
     
   </div>
 
+
   <!--  textarea -->
-  <div class="group col-span-4 bg-white h-32"> 
+  <div class="group col-span-4 bg-white "> 
     <div class="flex m-2 border-b-2 border-green-300 pb-2 items-center">
       <i class="bi bi-type-bold px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i>
       <i class="bi bi-type-strikethrough px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i>
       <i class="bi bi-code-slash px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i>
+      
       <div id="finish-btn" class="ml-auto">
         <div onclick="pushData()" class="text-white bg-green-500 mx-2 px-2 py-1 rounded-full cursor-pointer hover:bg-green-600 duration-300 transition-all">finish</div>
       </div>
 
       <div id="delete-btn">
-        <i onclick="deleteCurrentPage()" class="bi bi-trash3 mr-3 px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i>
+        <i class="bi bi-trash3 mr-3 px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i>
       </div>
       
       <i class="bi bi-clipboard mr-3 px-2 hover:bg-slate-200 rounded-lg transition-all duration-500 cursor-pointer"></i> 
@@ -51,7 +53,7 @@
   
     <form id="" class="w-full h-full">
       <div class="flex items-center transition-all duration-500">
-        <textarea id="text-field" rows="16" cols="50" class="resize-none appearance-none bg-transparent focus:outline-none w-full h-72 text-gray-700 mr-3 py-1 px-2"
+        <textarea id="text-field" rows="16" cols="50" class="resize-none appearance-none bg-transparent focus:outline-none w-full h-full text-gray-700 mr-3 py-1 px-2"
         placeholder="Type something here!!"></textarea>
       </div>
     </form>

@@ -1,6 +1,7 @@
 let data = ['inti']
 
 const titleEl = document.getElementById("title-el")
+const deleteBtn = document.getElementById("delete-btn")
 const textField = document.getElementById('text-field')
 const finishBtn = document.getElementById('finish-btn')
 const dataLocal = JSON.parse( localStorage.getItem("dataSet") )
@@ -17,10 +18,17 @@ const pushData = () => {
     textField.value = "";
     localStorage.setItem("dataSet", JSON.stringify(data));
 }
+console.log(data)
 
-
-const deleteCurrentPage = () => {
+const deleteCurrentPage = (index) => {
+    console.log(index)
+    for( let i = 0; i < data.length; i++){ 
+        if ( i === index) { 
     
+            data.splice(i, 1); 
+        }
+    }
+    localStorage.setItem("dataSet", JSON.stringify(data));
 }
 
 const modifyCurrentPage = (index) => {
@@ -30,6 +38,14 @@ const modifyCurrentPage = (index) => {
 
 const renderArticle = (index) => {
     document.getElementById("text-field").value = data[index];
+    deleteBtn.innerHTML = `
+        <i onclick="deleteCurrentPage(${index})" 
+        class="bi bi-trash3 mr-3 px-2
+        hover:bg-slate-200 rounded-lg
+        transition-all duration-500
+        cursor-pointer"></i>
+    `
+    
     finishBtn.innerHTML = `
         <div onclick="modifyCurrentPage(${index})" class="text-white
         bg-green-500 mx-2 px-2 py-1 rounded-full
@@ -46,7 +62,7 @@ function newNote() {
     `
     titleEl.innerHTML += `
             <div  class="mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
-                new note
+                <i class="bi bi-bookmark-check-fill text-green-700 pr-1"></i> new note
             </div>
         `
 };
