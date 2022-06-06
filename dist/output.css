@@ -476,10 +476,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0.5rem;
 }
 
-.bottom-6 {
-  bottom: 1.5rem;
-}
-
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -529,12 +525,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 18rem;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-full {
   height: 100%;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .max-h-96 {
@@ -549,21 +545,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 16.666667%;
 }
 
-.w-2 {
-  width: 0.5rem;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
 
 .resize-none {
   resize: none;
-}
-
-.scroll-py-0 {
-  scroll-padding-top: 0px;
-  scroll-padding-bottom: 0px;
 }
 
 .appearance-none {
@@ -663,11 +650,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .pl-1 {
