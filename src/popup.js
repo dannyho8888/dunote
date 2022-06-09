@@ -36,12 +36,8 @@ deleteBtn.addEventListener("click", function(){  // delete
     }
     localStorage.setItem("dataSet", JSON.stringify(data))
     renderTitle()
-    if(indexID >= data.length){
-        indexID = data.length - 1
-        textField.value = data[indexID]
-    }else{
-        textField.value = data[indexID]
-    }
+    if(indexID >= data.length){ indexID = data.length - 1}
+    textField.value = data[indexID]
 })
 
 copyBtn.addEventListener("click", function(){  // copy
@@ -70,13 +66,13 @@ searchBar.addEventListener("keyup", function(){
         titleEl.innerHTML = ``
         for (let j = 0; j < shower.length; j++) {
             let title = ""
-            for(let c of data[j]){
+            for(let c of data[shower[j]]){
                 if(c ==='\n')break
                 title += c
             }
             if(title.length>15) title = title.slice(0,15) + "..."
             titleEl.innerHTML += `
-            <div id="${j}"  class="title cursor-pointer mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
+            <div id="${shower[j]}"  class="title cursor-pointer mt-1 pl-1 flex items-center border-b-2 py-2 hover:bg-gray-300 rounded">
                 <i class="bi bi-bookmark-check-fill text-green-700 pr-1"></i> ${title}
             </div>
                 `
