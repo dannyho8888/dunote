@@ -9,7 +9,7 @@ const copyBtn = document.getElementById("copy-btn")
 const copyIcon = document.getElementById("copy-icon")
 const searchBar = document.getElementById("search-bar")
 let indexID = 0 
-
+let mouseHover = false
 initTitle()
 
 titleEl.addEventListener("click", function(e){  // when tital be clicked show note in textArea
@@ -31,13 +31,16 @@ newNote.addEventListener('click', function(){  // creat new note
 })
 
 deleteBtn.addEventListener("click", function(){  // delete
-    for( let i = 0; i < data.length; i++){ 
-        if ( i == indexID) data.splice(i, 1)
+    let comfirm = confirm("You sure you want to delete this note")
+    if(comfirm == true){
+        for( let i = 0; i < data.length; i++){ 
+            if ( i == indexID) data.splice(i, 1)
+        }
+        localStorage.setItem("dataSet", JSON.stringify(data))
+        renderTitle()
+        if(indexID >= data.length){ indexID = data.length - 1}
+        textField.value = data[indexID]
     }
-    localStorage.setItem("dataSet", JSON.stringify(data))
-    renderTitle()
-    if(indexID >= data.length){ indexID = data.length - 1}
-    textField.value = data[indexID]
 })
 
 copyBtn.addEventListener("click", function(){  // copy
@@ -53,7 +56,7 @@ copyBtn.addEventListener("click", function(){  // copy
 })
 
 searchBar.addEventListener("keyup", function(){
-    if(searchBar.value==""){
+    if(searchBar.value == ""){
         renderTitle()
         textField.value = data[indexID]
     }else{
@@ -64,7 +67,7 @@ searchBar.addEventListener("keyup", function(){
             }
         }
         titleEl.innerHTML = ``
-        for (let j = 0; j < shower.length; j++) {
+        for(let j = 0; j < shower.length; j++) {
             let title = ""
             for(let c of data[shower[j]]){
                 if(c ==='\n')break
