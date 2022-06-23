@@ -8,15 +8,20 @@ const deleteBtn = document.getElementById("delete-btn")
 const copyBtn = document.getElementById("copy-btn")
 const copyIcon = document.getElementById("copy-icon")
 const searchBar = document.getElementById("search-bar")
-let indexID = 0 
+
+let indexID = JSON.parse(localStorage.getItem("Index"))
+console.log(indexID)
+indexID =  indexID ? indexID : 0 
+
 let mouseHover = false
 initTitle()
 
-titleEl.addEventListener("click", function(e){  // when tital be clicked show note in textArea
+titleEl.addEventListener("click", function(e){  // when click title show note in textArea
     if(e.target.closest(".title") != null){
         indexID = e.target.closest(".title").getAttribute('id')
         textField.value = data[indexID]
-    } 
+    }
+    localStorage.setItem("Index",indexID)
 })
 
 newNote.addEventListener('click', function(){  // creat new note
