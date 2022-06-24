@@ -51,11 +51,11 @@ deleteBtn.addEventListener("click", function(){  // delete
 copyBtn.addEventListener("click", function(){  // copy
     navigator.clipboard.writeText(textField.value);  // turn icon to clipboard-check
     copyBtn.innerHTML = `
-        <i class="bi bi-clipboard-check mr-3 px-2 text-green-700 hover:bg-slate-300 rounded-lg transition-all duration-500 cursor-pointer"></i>
+        <i class="bi bi-clipboard-check mr-3 px-2 text-green-700 hover:bg-slate-300 rounded-lg transition-all duration-500 cursor-pointer py-1"></i>
          `
     setTimeout(function(){  // wait 3 seconds turn back
         copyBtn.innerHTML = `
-        <i class="bi bi-clipboard mr-3 px-2 text-green-500 "></i> 
+        <i class="bi bi-clipboard mr-3 px-2 text-green-500 hover:bg-slate-300 rounded-lg transition-all duration-500 cursor-pointer py-1"></i>  
         `
     },3000);
 })
@@ -123,3 +123,4 @@ function renderTitle(){  // update tital
             `
     }
 }
+
